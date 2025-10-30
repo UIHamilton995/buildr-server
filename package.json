@@ -1,13 +1,16 @@
 {
   "name": "buildr-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Robust Express + TypeScript backend server",
+  "homepage": "https://github.com/UIHamilton995/buildr-server#readme",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "nodemon --watch src --exec ts-node-esm src/index.ts"
+    "dev": "NODE_NO_WARNINGS=1 nodemon",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,6 @@
   "bugs": {
     "url": "https://github.com/UIHamilton995/buildr-server/issues"
   },
-  "homepage": "https://github.com/UIHamilton995/buildr-server#readme",
-  "description": "",
   "dependencies": {
     "express": "^4.19.2"
   },
@@ -29,6 +30,9 @@
     "@types/node": "^24.9.2",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "eslint": "^9.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1"
   }
 }

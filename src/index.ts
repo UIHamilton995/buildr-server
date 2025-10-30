@@ -4,9 +4,9 @@ const app = express();
 const PORT = 7777
 
 app.listen(PORT, () => {
-  console.log(`App is running on Port ${PORT}`)
+  console.log(`🚀 Buildr server is running on Port ${PORT}`)
 });
 
 app.get('/', (req: Request, res: Response) => {
-  res.send("Holla .ts!!!")
+  res.send(`🚀 The Buildr server is running on Port ${PORT}`)
 })
